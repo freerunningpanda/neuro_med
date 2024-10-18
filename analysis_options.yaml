@@ -1,0 +1,15 @@
+include: package:very_good_analysis/analysis_options.yaml
+linter:
+  rules:
+    public_member_api_docs: false
+analyzer:
+  errors:
+    join_return_with_assignment: ignore
+    one_member_abstracts: ignore
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - "**/messages_all.dart"
+    - "**/messages_en.dart"
+    - "**/messages_ru.dart"
+    - "**/l10n.dart"

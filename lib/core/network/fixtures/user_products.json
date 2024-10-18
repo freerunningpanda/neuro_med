@@ -1,0 +1,247 @@
+{
+    "user_products": [
+        {
+            "id": 1,
+            "length": 10,
+            "name": "Общие развивающие программы",
+            "passed": 1,
+            "status": "in_progress",
+            "thumbnail": "https://avatanplus.com/files/resources/mid/5a2f6d04ac6801604941da62.jpg",
+            "end_date": null,
+            "videos": [
+                {
+                    "id": 1,
+                    "kinescope_id": "fcbd6a17-d0e6-45a4-af9f-87a00c00527d",
+                    "name": "Сессия 1",
+                    "status": "done",
+                    "view_progress": 15.04
+                },
+                {
+                    "id": 2,
+                    "name": "Сессия 2",
+                    "kinescope_id": "fcbd6a17-d0e6-45a4-af9f-87a00c00527d",
+                    "status": "in_progress",
+                    "view_progress": 1.04
+                },
+                {
+                    "id": 3,
+                    "name": "Сессия 3",
+                    "kinescope_id": "fcbd6a17-d0e6-45a4-af9f-87a00c00527d",
+                    "status": "new",
+                    "view_progress": 0
+                },
+                {
+                    "id": 4,
+                    "name": "Сессия 4",
+                    "kinescope_id": "fcbd6a17-d0e6-45a4-af9f-87a00c00527d",
+                    "status": "new",
+                    "view_progress": 0
+                },
+                {
+                    "id": 5,
+                    "name": "Сессия 5",
+                    "kinescope_id": "fcbd6a17-d0e6-45a4-af9f-87a00c00527d",
+                    "status": "new",
+                    "view_progress": 0
+                },
+                {
+                    "id": 6,
+                    "name": "Сессия 6",
+                    "kinescope_id": "fcbd6a17-d0e6-45a4-af9f-87a00c00527d",
+                    "status": "new",
+                    "view_progress": 0
+                },
+                {
+                    "id": 7,
+                    "name": "Сессия 7",
+                    "kinescope_id": "fcbd6a17-d0e6-45a4-af9f-87a00c00527d",
+                    "status": "new",
+                    "view_progress": 0
+                },
+                {
+                    "id": 8,
+                    "name": "Сессия 8",
+                    "kinescope_id": "fcbd6a17-d0e6-45a4-af9f-87a00c00527d",
+                    "status": "new",
+                    "view_progress": 0
+                },
+                {
+                    "id": 9,
+                    "name": "Сессия 9",
+                    "kinescope_id": "fcbd6a17-d0e6-45a4-af9f-87a00c00527d",
+                    "status": "new",
+                    "view_progress": 0
+                },
+                {
+                    "id": 10,
+                    "name": "Сессия 10",
+                    "kinescope_id": "fcbd6a17-d0e6-45a4-af9f-87a00c00527d",
+                    "status": "new",
+                    "view_progress": 0
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "length": 10,
+            "name": "Коррекция речи",
+            "passed": 0,
+            "status": "new",
+            "thumbnail": "https://avatanplus.com/files/resources/mid/5a2f6d04ac6801604941da62.jpg",
+            "end_date": null,
+            "videos": [
+                {
+                    "id": 1,
+                    "name": "Сессия 1",
+                    "kinescope_id": "fcbd6a17-d0e6-45a4-af9f-87a00c00527d",
+                    "status": "new",
+                    "view_progress": 0
+                },
+                {
+                    "id": 2,
+                    "name": "Сессия 2",
+                    "kinescope_id": "fcbd6a17-d0e6-45a4-af9f-87a00c00527d",
+                    "status": "new",
+                    "view_progress": 0
+                },
+                {
+                    "id": 3,
+                    "name": "Сессия 3",
+                    "kinescope_id": "fcbd6a17-d0e6-45a4-af9f-87a00c00527d",
+                    "status": "new",
+                    "view_progress": 0
+                },
+                {
+                    "id": 4,
+                    "name": "Сессия 4",
+                    "kinescope_id": "fcbd6a17-d0e6-45a4-af9f-87a00c00527d",
+                    "status": "new",
+                    "view_progress": 0
+                },
+                {
+                    "id": 5,
+                    "name": "Сессия 5",
+                    "kinescope_id": "fcbd6a17-d0e6-45a4-af9f-87a00c00527d",
+                    "status": "new",
+                    "view_progress": 0
+                },
+                {
+                    "id": 6,
+                    "name": "Сессия 6",
+                    "kinescope_id": "fcbd6a17-d0e6-45a4-af9f-87a00c00527d",
+                    "status": "new",
+                    "view_progress": 0
+                },
+                {
+                    "id": 7,
+                    "name": "Сессия 7",
+                    "kinescope_id": "fcbd6a17-d0e6-45a4-af9f-87a00c00527d",
+                    "status": "new",
+                    "view_progress": 0
+                },
+                {
+                    "id": 8,
+                    "name": "Сессия 8",
+                    "kinescope_id": "fcbd6a17-d0e6-45a4-af9f-87a00c00527d",
+                    "status": "new",
+                    "view_progress": 0
+                },
+                {
+                    "id": 9,
+                    "name": "Сессия 9",
+                    "kinescope_id": "fcbd6a17-d0e6-45a4-af9f-87a00c00527d",
+                    "status": "new",
+                    "view_progress": 0
+                },
+                {
+                    "id": 10,
+                    "name": "Сессия 10",
+                    "kinescope_id": "fcbd6a17-d0e6-45a4-af9f-87a00c00527d",
+                    "status": "new",
+                    "view_progress": 0
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "length": 10,
+            "name": "Коррекция речи",
+            "passed": 10,
+            "status": "done",
+            "thumbnail": "https://avatanplus.com/files/resources/mid/5a2f6d04ac6801604941da62.jpg",
+            "end_date": "24.07.2023",
+            "videos": [
+                {
+                    "id": 1,
+                    "name": "Сессия 1",
+                    "kinescope_id": "fcbd6a17-d0e6-45a4-af9f-87a00c00527d",
+                    "status": "done",
+                    "view_progress": 20.0
+                },
+                {
+                    "id": 2,
+                    "name": "Сессия 2",
+                    "kinescope_id": "fcbd6a17-d0e6-45a4-af9f-87a00c00527d",
+                    "status": "done",
+                    "view_progress": 20.0
+                },
+                {
+                    "id": 3,
+                    "name": "Сессия 3",
+                    "kinescope_id": "fcbd6a17-d0e6-45a4-af9f-87a00c00527d",
+                    "status": "done",
+                    "view_progress": 20.0
+                },
+                {
+                    "id": 4,
+                    "name": "Сессия 4",
+                    "kinescope_id": "fcbd6a17-d0e6-45a4-af9f-87a00c00527d",
+                    "status": "done",
+                    "view_progress": 20.0
+                },
+                {
+                    "id": 5,
+                    "name": "Сессия 5",
+                    "kinescope_id": "fcbd6a17-d0e6-45a4-af9f-87a00c00527d",
+                    "status": "done",
+                    "view_progress": 20.0
+                },
+                {
+                    "id": 6,
+                    "name": "Сессия 6",
+                    "kinescope_id": "fcbd6a17-d0e6-45a4-af9f-87a00c00527d",
+                    "status": "done",
+                    "view_progress": 20.0
+                },
+                {
+                    "id": 7,
+                    "name": "Сессия 7",
+                    "kinescope_id": "fcbd6a17-d0e6-45a4-af9f-87a00c00527d",
+                    "status": "done",
+                    "view_progress": 20.0
+                },
+                {
+                    "id": 8,
+                    "name": "Сессия 8",
+                    "kinescope_id": "fcbd6a17-d0e6-45a4-af9f-87a00c00527d",
+                    "status": "done",
+                    "view_progress": 20.0
+                },
+                {
+                    "id": 9,
+                    "name": "Сессия 9",
+                    "kinescope_id": "fcbd6a17-d0e6-45a4-af9f-87a00c00527d",
+                    "status": "done",
+                    "view_progress": 20.0
+                },
+                {
+                    "id": 10,
+                    "name": "Сессия 10",
+                    "kinescope_id": "fcbd6a17-d0e6-45a4-af9f-87a00c00527d",
+                    "status": "done",
+                    "view_progress": 20.0
+                }
+            ]
+        }
+    ]
+}

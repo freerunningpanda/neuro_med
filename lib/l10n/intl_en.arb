@@ -1,0 +1,358 @@
+{
+  "mainScreen": "Main Screen",
+  "@mainScreen": {
+    "description": "The main screen of the app",
+    "type": "text"
+  },
+  "@@locale": "en",
+  "main": "Main",
+  "@main": {
+    "description": "The main screen of the app",
+    "type": "text"
+  },
+  "login": "Login",
+  "@login": {
+    "description": "The login screen of the app",
+    "type": "text"
+  },
+  "logout": "Logout",
+  "@logout": {
+    "description": "The logout screen of the app",
+    "type": "text"
+  },
+  "splash_descr": "Effective neurotraining complexes",
+  "@splash_descr": {
+    "description": "The description of the app",
+    "type": "text"
+  },
+  "upmind_products": "UpMind+ products",
+  "@upmind_products": {
+    "description": "Products of the app",
+    "type": "text"
+  },
+  "loginToPersonalAccount": "Log in to your personal account",
+  "@loginToPersonalAccount": {
+    "description": "Login to your personal account",
+    "type": "text"
+  },
+  "enterLogin": "Enter login",
+  "@enterLogin": {
+    "description": "Description of the login input field",
+    "type": "text"
+  },
+  "enterPassword": "Enter password",
+  "@enterPassword": {
+    "description": "Description of the password input field",
+    "type": "text"
+  },
+  "forgotPassword": "Forgot password?",
+  "@forgotPassword": {
+    "description": "The 'Forgot password?' button",
+    "type": "text"
+  },
+  "noCredentials": "If you do not have a login and password yet,\n",
+  "@noCredentials": {
+    "description": "The text 'If you don't have a login and password yet'",
+    "type": "text"
+  },
+  "contactAdmin": "contact the administrator",
+  "@contactAdmin": {
+    "description": "The text 'Contact the administrator'",
+    "type": "text"
+  },
+  "invalidLoginOrPassword": "Invalid login or password",
+  "@invalidLoginOrPassword": {
+    "description": "The text 'Wrong login or password",
+    "type": "text"
+  },
+  "settings": "Settings",
+  "@settings": {
+    "description": "The settings screen of the app",
+    "type": "text"
+  },
+  "myData": "My data",
+  "@myData": {
+    "description": "The 'My data' screen of the app",
+    "type": "text"
+  },
+  "name": "Name",
+  "@name": {
+    "description": "The 'Name' field",
+    "type": "text"
+  },
+  "email": "E-mail",
+  "@email": {
+    "description": "The 'E-mail' field",
+    "type": "text"
+  },
+  "logoutFromAccount": "Logout",
+  "@logoutFromAccount": {
+    "description": "The 'Logout from account' button",
+    "type": "text"
+  },
+  "pushNotifications": "Push-notifications",
+  "@pushNotifications": {
+    "description": "The 'Push-notifications' switcher",
+    "type": "text"
+  },
+  "emailNotifications": "E-mail-notifications",
+  "@emailNotifications": {
+    "description": "The 'E-mail-notifications' switcher",
+    "type": "text"
+  },
+  "notifications": "Notifications",
+  "@notifications": {
+    "description": "The 'Notification' screen",
+    "type": "text"
+  },
+  "notificationSettings": "Notification settings",
+  "@notificationSettings": {
+    "description": "The 'Notification settings' screen",
+    "type": "text"
+  },
+  "logoutConfirm": "Are you sure you want to log out?",
+  "@logoutConfirm": {
+    "description": "The 'Are you sure you want to log out?' message",
+    "type": "text"
+  },
+  "logoutButton": "Logout",
+  "@logoutButton": {
+    "description": "The 'Logout' button",
+    "type": "text"
+  },
+  "passwordResetDescr": "To reset your password, enter your e-mail message.",
+  "@passwordResetDescr": {
+    "description": "The 'To reset your password, enter your e-mail' message",
+    "type": "text"
+  },
+  "newPasswordDescr": "We will send a new password to your e-mail.",
+  "@newPasswordDescr": {
+    "description": "The 'We will send a new password to your e-mail' message"
+  },
+  "yourEmail": "Ваш email",
+  "@yourEmail": {
+    "description": "The 'Your email' field",
+    "type": "text"
+  },
+  "send": "Отправить",
+  "@send": {
+    "description": "The 'Send' button",
+    "type": "text"
+  },
+  "contactTheAdmin": "Contacting the administrator",
+  "@contactTheAdmin": {
+    "description": "The 'Contacting the administrator' screen",
+    "type": "text"
+  },
+  "enterPhone": "Enter phone",
+  "@enterPhone": {
+    "description": "The 'Enter phone' field",
+    "type": "text"
+  },
+  "yourMessage": "Your message",
+  "@yourMessage": {
+    "description": "The 'Your message' field",
+    "type": "text"
+  },
+  "commonProducts": "General developmental programs",
+  "@commonProducts": {
+    "description": "Title of 'General developmental programs'",
+    "type": "text"
+  },
+  "myProducts": "My products",
+  "@myProducts": {
+    "description": "Title of 'My products'",
+    "type": "text"
+  },
+  "details": "Details",
+  "@details": {
+    "description": "The 'Details' button",
+    "type": "text"
+  },
+  "consultDoctor": "Doctor Consultation",
+  "@consultDoctor": {
+    "description": "Doctor Consultation",
+    "type": "text"
+  },
+  "enterYourName": "Enter your name",
+  "@enterYourName": {
+    "description": "The 'Enter your name' field",
+    "type": "text"
+  },
+  "getConsultation": "Get the consultation",
+  "@getConsultation": {
+    "description": "The 'Get the consultation' button",
+    "type": "text"
+  },
+  "enterPhoneNumber": "Enter your phone number",
+  "@enterPhoneNumber": {
+    "description": "The 'Enter your phone number' field",
+    "type": "text"
+  },
+  "incorrectPhoneNumber": "Incorrect phone number",
+  "@incorrectPhoneNumber": {
+    "description": "The 'Incorrect phone number' message",
+    "type": "text"
+  },
+  "nameIsEmpty": "Name cannot be empty",
+  "@nameIsEmpty": {
+    "description": "The 'Name cannot be empty' message",
+    "type": "text"
+  },
+  "nameLength": "Name must be at least 2 characters long",
+  "@nameLength": {
+    "description": "The 'Name must be at least 2 characters long' message",
+    "type": "text"
+  },
+  "nameConditions": "Name must contain only letters",
+  "@nameConditions": {
+    "description": "The 'Name must contain only letters' message",
+    "type": "text"
+  },
+  "emailCantBeEmpty": "Email cannot be empty",
+  "@emailCantBeEmpty": {
+    "description": "The 'Email cannot be empty' message",
+    "type": "text"
+  },
+  "enterValidEmail": "Enter a valid email",
+  "@enterValidEmail": {
+    "description": "The 'Enter a valid email' message",
+    "type": "text"
+  },
+  "minPasswordLength": "Password must contain at least 6 characters",
+  "@minPasswordLength": {
+    "description": "The 'Password must contain at least 6 characters' message",
+    "type": "text"
+  },
+  "minLoginLength": "Login must contain at least 2 characters",
+  "@minLoginLength": {
+    "description": "The 'Login must contain at least 2 characters' message",
+    "type": "text"
+  },
+  "fieldCantBeEmpty": "Field cannot be empty",
+  "@fieldCantBeEmpty": {
+    "description": "The 'Field cannot be empty' message",
+    "type": "text"
+  },
+  "my_products": "My programs",
+  "@my_products": {
+    "description": "The 'My programs' screen",
+    "type": "text"
+  },
+  "inProgress": "In progress",
+  "@inProgress": {
+    "description": "The 'In progress' status",
+    "type": "text"
+  },
+  "newLesson": "New",
+  "@newLesson": {
+    "description": "The 'New' status",
+    "type": "text"
+  },
+  "done": "Done",
+  "@done": {
+    "description": "The 'Done' status",
+    "type": "text"
+  },
+  "unknown": "Unknown",
+  "@unknown": {
+    "description": "The 'Unknown' status",
+    "type": "text"
+  },
+  "moduleContains": "Module contains",
+  "@moduleContains": {
+    "description": "The 'Module contains' message",
+    "type": "text"
+  },
+  "passedSessions": "Passed sessions",
+  "@passedSessions": {
+    "description": "The 'Passed sessions' message",
+    "type": "text"
+  },
+  "from": "from",
+  "@from": {
+    "description": "The 'from' message",
+    "type": "text"
+  },
+  "finished": "Finished",
+  "@finished": {
+    "description": "The 'Finished' status",
+    "type": "text"
+  },
+  "nSessions": "{count, plural, =0{0 sessions} =1{{count} session} few{{count} sessions} other{{count} sessions}}",
+  "@nSessions": {
+    "description": "Plural form for 'session'",
+    "type": "text",
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "nSubProducts": "{count, plural, =0{0 program} =1{{count} program} =2{{count} programs} few{{count} programs} other{{count} programs}}",
+  "@nSubProducts": {
+    "description": "Plural form for 'program'",
+    "type": "text",
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "areas": "Areas of application",
+  "@areas": {
+    "description": "The 'Areas of application' message",
+    "type": "text"
+  },
+  "turnTheScreen": "Turn the screen horizontally for comfortable video viewing",
+  "@turnTheScreen": {
+    "description": "The 'Turn the screen horizontally for comfortable video viewing' message",
+    "type": "text"
+  },
+  "markAsViewed": "Mark as viewed",
+  "@markAsViewed": {
+    "description": "The 'Mark as viewed' message",
+    "type": "text"
+  },
+  "sessions": "Sessions",
+  "@sessions": {
+    "description": "The 'Sessions' message",
+    "type": "text"
+  },
+  "hidePassedSessions": "Hide passed sessions",
+  "@hidePassedSessions": {
+    "description": "The 'Hide passed sessions' message",
+    "type": "text"
+  },
+  "programSessions": "Program sessions",
+  "@programSessions": {
+    "description": "The 'Program sessions' message",
+    "type": "text"
+  },
+  "sessionAlreadyViewed": "This session has already been viewed. Viewing the session is possible 1 time",
+  "@sessionAlreadyViewed": {
+    "description": "The 'This session has already been viewed. Viewing the session is possible 1 time' message",
+    "type": "text"
+  },
+  "sessionIsRestricted": "This session is not yet available, return to viewing the current one",
+  "@sessionIsRestricted": {
+    "description": "The 'This session is not yet available, return to viewing the current one' message",
+    "type": "text"
+  },
+  "markAsViewedDescription": "This video can be viewed 1 time.\nIf you mark it as viewed, you will not be able to watch this session again",
+  "@markAsViewedDescription": {
+    "description": "The 'This video can be viewed 1 time.\nIf you mark it as viewed, you will not be able to watch this session again' message",
+    "type": "text"
+  },
+  "somethingWentWrong": "Something went wrong...",
+  "@somethingWentWrong": {
+    "description": "The 'Something went wrong...' message",
+    "type": "text"
+  },
+  "tryAgain": "Try again",
+  "@tryAgain": {
+    "description": "The 'Try again' message",
+    "type": "text"
+  },
+  "repeat": "Repeat",
+  "@repeat": {
+    "description": "The 'Repeat' message",
+    "type": "text"
+  }
+}

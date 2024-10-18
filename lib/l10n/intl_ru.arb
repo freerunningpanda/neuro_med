@@ -1,0 +1,359 @@
+{
+  "mainScreen": "Главный экран",
+  "@mainScreen": {
+    "description": "Главный экран приложения",
+    "type": "text"
+  },
+  "@@locale": "ru",
+  "main": "Главная",
+  "@main": {
+    "description": "Главная страница",
+    "type": "text"
+  },
+  "login": "Войти",
+  "@login": {
+    "description": "Войти в систему",
+    "type": "text"
+  },
+  "logout": "Выйти",
+  "@logout": {
+    "description": "Выйти из системы",
+    "type": "text"
+  },
+  "splash_descr": "Эффективные нейротренинговые комплексы",
+  "@splash_descr": {
+    "description": "Описание приложения",
+    "type": "text"
+  },
+  "upmind_products": "Программы UpMind+",
+  "@upmind_products": {
+    "description": "Продукты приложения",
+    "type": "text"
+  },
+  "loginToPersonalAccount": "Вход в личный кабинет",
+  "@loginToPersonalAccount": {
+    "description": "Вход в личный кабинет",
+    "type": "text"
+  },
+  "enterLogin": "Введите логин",
+  "@enterLogin": {
+    "description": "Описание поля ввода логина",
+    "type": "text"
+  },
+  "enterPassword": "Введите пароль",
+  "@enterPassword": {
+    "description": "Описание поля ввода пароля",
+    "type": "text"
+  },
+  "forgotPassword": "Забыли пароль?",
+  "@forgotPassword": {
+    "description": "Кнопка 'Забыли пароль?'",
+    "type": "text"
+  },
+  "noCredentials": "Если у вас еще нет логина и пароля,\n",
+  "@noCredentials": {
+    "description": "Текст 'Если у вас еще нет логина и пароля'",
+    "type": "text"
+  },
+  "contactAdmin": "обратитесь к администратору",
+  "@contactAdmin": {
+    "description": "Текст 'обратитесь к администратору'",
+    "type": "text"
+  },
+  "invalidLoginOrPassword": "Неверный логин или пароль",
+  "@invalidLoginOrPassword": {
+    "description": "Неверный логин или пароль",
+    "type": "text"
+  },
+  "settings": "Настройки",
+  "@settings": {
+    "description": "Настройки приложения",
+    "type": "text"
+  },
+  "myData": "Мои данные",
+  "@myData": {
+    "description": "Мои данные",
+    "type": "text"
+  },
+  "name": "Имя",
+  "@name": {
+    "description": "Имя",
+    "type": "text"
+  },
+  "email": "E-mail",
+  "@email": {
+    "description": "E-mail",
+    "type": "text"
+  },
+  "logoutFromAccount": "Выход из аккаунта",
+  "@logoutFromAccount": {
+    "description": "Кнопка 'Выход из аккаунта'",
+    "type": "text"
+  },
+  "pushNotifications": "Push-уведомления",
+  "@pushNotifications": {
+    "description": "Push-уведомления",
+    "type": "text"
+  },
+  "emailNotifications": "E-mail-уведомления",
+  "@emailNotifications": {
+    "description": "E-mail-уведомления",
+    "type": "text"
+  },
+  "notifications": "Уведомления",
+  "@notifications": {
+    "description": "Экран уведомлений",
+    "type": "text"
+  },
+  "notificationSettings": "Настройка уведомлений",
+  "@notificationSettings": {
+    "description": "Настройка уведомлений",
+    "type": "text"
+  },
+  "logoutConfirm": "Вы уверены, что хотите выйти из аккаунта?",
+  "@logoutConfirm": {
+    "description": "Сообщение 'Вы уверены, что хотите выйти из аккаунта?'",
+    "type": "text"
+  },
+  "logoutButton": "Выйти",
+  "@logoutButton": {
+    "description": "Кнопка 'Выйти'",
+    "type": "text"
+  },
+  "passwordResetDescr": "Для восстановления пароля введите свой e-mail.",
+  "@passwordResetDescr": {
+    "description": "Сообщение 'Для восстановления пароля введите свой e-mail'",
+    "type": "text"
+  },
+  "newPasswordDescr": "На ваш e-mail мы пришлем  новый пароль.",
+  "@newPasswordDescr": {
+    "description": "Сообщение 'На ваш e-mail мы пришлем  новый пароль'",
+    "type": "text"
+  },
+  "yourEmail": "Ваш email",
+  "@yourEmail": {
+    "description": "Поле 'Ваш email'",
+    "type": "text"
+  },
+  "send": "Отправить",
+  "@send": {
+    "description": "Кнопка 'Отправить'",
+    "type": "text"
+  },
+  "contactTheAdmin": "Обращение к администратору",
+  "@contactTheAdmin": {
+    "description": "Обращение к администратору",
+    "type": "text"
+  },
+  "enterPhone": "Введите телефон",
+  "@enterPhone": {
+    "description": "Поле 'Введите телефон'",
+    "type": "text"
+  },
+  "yourMessage": "Сообщение",
+  "@yourMessage": {
+    "description": "Поле 'Сообщение'",
+    "type": "text"
+  },
+  "commonProducts": "Общие развивающие программы",
+  "@commonProducts": {
+    "description": "Заголовок 'Общие развивающие программы'",
+    "type": "text"
+  },
+  "myProducts": "Мои программы",
+  "@myProducts": {
+    "description": "Заголовок 'Мои программы'",
+    "type": "text"
+  },
+  "details": "Подробнее",
+  "@details": {
+    "description": "Кнопка 'Подробнее'",
+    "type": "text"
+  },
+  "consultDoctor": "Консультация врача",
+  "@consultDoctor": {
+    "description": "Кнопка 'Консультация врача'",
+    "type": "text"
+  },
+  "enterYourName": "Введите имя",
+  "@enterYourName": {
+    "description": "Поле 'Введите имя'",
+    "type": "text"
+  },
+  "getConsultation": "Получить консультацию",
+  "@getConsultation": {
+    "description": "Кнопка 'Получить консультацию'",
+    "type": "text"
+  },
+  "enterPhoneNumber": "Введите номер телефона",
+  "@enterPhoneNumber": {
+    "description": "Поле 'Введите номер телефона'",
+    "type": "text"
+  },
+  "incorrectPhoneNumber": "Некорректный номер телефона",
+  "@incorrectPhoneNumber": {
+    "description": "Сообщение 'Некорректный номер телефона'",
+    "type": "text"
+  },
+  "nameIsEmpty": "Имя не может быть пустым",
+  "@nameIsEmpty": {
+    "description": "Сообщение 'Имя не может быть пустым'",
+    "type": "text"
+  },
+  "nameLength": "Длина имени не менее 2 символов",
+  "@nameLength": {
+    "description": "Сообщение 'Длина имени не менее 2 символов'",
+    "type": "text"
+  },
+  "nameConditions": "Имя должно содержать только буквы",
+  "@nameConditions": {
+    "description": "Сообщение 'Имя должно содержать только буквы'",
+    "type": "text"
+  },
+  "emailCantBeEmpty": "Email не может быть пустым",
+  "@emailCantBeEmpty": {
+    "description": "Сообщение 'Email не может быть пустым'",
+    "type": "text"
+  },
+  "enterValidEmail": "Введите корректный Email",
+  "@enterValidEmail": {
+    "description": "Сообщение 'Введите корректный Email'",
+    "type": "text"
+  },
+  "minPasswordLength": "Пароль должен содержать минимум 6 символов",
+  "@minPasswordLength": {
+    "description": "Сообщение 'Пароль должен содержать минимум 6 символов'",
+    "type": "text"
+  },
+  "minLoginLength": "Логин должен содержать минимум 2 символа",
+  "@minLoginLength": {
+    "description": "Сообщение 'Логин должен содержать минимум 2 символа'",
+    "type": "text"
+  },
+  "fieldCantBeEmpty": "Поле не может быть пустым",
+  "@fieldCantBeEmpty": {
+    "description": "Сообщение 'Поле не может быть пустым'",
+    "type": "text"
+  },
+  "my_products": "Мои программы",
+  "@my_products": {
+    "description": "Мои программы",
+    "type": "text"
+  },
+  "inProgress": "В процессе",
+  "@inProgress": {
+    "description": "Статус 'В процессе'",
+    "type": "text"
+  },
+  "newLesson": "Новый",
+  "@newLesson": {
+    "description": "Статус 'Новый'",
+    "type": "text"
+  },
+  "done": "Пройдено",
+  "@done": {
+    "description": "Статус 'Пройдено'",
+    "type": "text"
+  },
+  "unknown": "Неизвестно",
+  "@unknown": {
+    "description": "Статус 'Неизвестно'",
+    "type": "text"
+  },
+  "moduleContains": "Модуль содержит",
+  "@moduleContains": {
+    "description": "Текст 'Модуль содержит'",
+    "type": "text"
+  },
+  "passedSessions": "Пройдено сессий",
+  "@passedSessions": {
+    "description": "Текст 'Пройдено сессий'",
+    "type": "text"
+  },
+  "from": "из",
+  "@from": {
+    "description": "Текст 'из'",
+    "type": "text"
+  },
+  "finished": "Завершено",
+  "@finished": {
+    "description": "Статус 'Завершено'",
+    "type": "text"
+  },
+  "nSessions": "{count, plural, =0{0 сессий} =1{{count} сессию} =2{{count} сессии} few{{count} сессии} other{{count} сессий}}",
+  "@nSessions": {
+    "description": "Форма множественного числа для 'сессия'",
+    "type": "text",
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "nSubProducts": "{count, plural, =0{0 программ} =1{{count} программа} =2{{count} программы} few{{count} программы} other{{count} программ}}",
+  "@nSubProducts": {
+    "description": "Форма множественного числа для 'программа'",
+    "type": "text",
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "areas": "Области применения",
+  "@areas": {
+    "description": "Области применения",
+    "type": "text"
+  },
+  "turnTheScreen": "Разверните экран горизонтально для удобного просмотра видео",
+  "@turnTheScreen": {
+    "description": "Сообщение 'Разверните экран горизонтально для удобного просмотра видео'",
+    "type": "text"
+  },
+  "markAsViewed": "Отметить просмотренным",
+  "@markAsViewed": {
+    "description": "Кнопка 'Отметить просмотренным'",
+    "type": "text"
+  },
+  "sessions": "Сессии",
+  "@sessions": {
+    "description": "Сессии",
+    "type": "text"
+  },
+  "hidePassedSessions": "Скрыть пройденные сессии",
+  "@hidePassedSessions": {
+    "description": "Кнопка 'Скрыть пройденные сессии'",
+    "type": "text"
+  },
+  "programSessions": "Сессии программы",
+  "@programSessions": {
+    "description": "Сессии программы",
+    "type": "text"
+  },
+  "sessionAlreadyViewed": "Эта сессия уже просмотрена. Просмотр сессии возможен 1 раз",
+  "@sessionAlreadyViewed": {
+    "description": "Сообщение 'Эта сессия уже просмотрена. Просмотр сессии возможен 1 раз'",
+    "type": "text"
+  },
+  "sessionIsRestricted": "Эта сессия пока не доступна, вернитесь к просмотру текущей",
+  "@sessionIsRestricted": {
+    "description": "Сообщение 'Эта сессия пока не доступна, вернитесь к просмотру текущей'",
+    "type": "text"
+  },
+  "markAsViewedDescription": "Данное видео можно просматривать 1 раз.\nЕсли Вы отметите его просмотренным, то больше не сможете посмотреть эту сессию",
+  "@markAsViewedDescription": {
+    "description": "Сообщение 'Данное видео можно просматривать 1 раз.\nЕсли Вы отметите его просмотренным, то больше не сможете посмотреть эту сессию'",
+    "type": "text"
+  },
+  "somethingWentWrong": "Что-то пошло не так...",
+  "@somethingWentWrong": {
+    "description": "Сообщение 'Что-то пошло не так...'",
+    "type": "text"
+  },
+  "tryAgain": "Попробуйте ещё раз",
+  "@tryAgain": {
+    "description": "Кнопка 'Попробуйте ещё раз'",
+    "type": "text"
+  },
+  "repeat": "Повторить",
+  "@repeat": {
+    "description": "Кнопка 'Повторить'",
+    "type": "text"
+  }
+}

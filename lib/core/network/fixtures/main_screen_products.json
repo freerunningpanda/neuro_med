@@ -1,0 +1,71 @@
+{
+    "categories": [
+        {
+            "category": [
+                {
+                    "id": 1,
+                    "title": "Детское здоровье",
+                    "products": [
+                        {
+                            "name": "Общие развивающие программы",
+                            "description": "Описание программы",
+                            "thumbnail": "https://avatanplus.com/files/resources/mid/5a2f6d04ac6801604941da62.jpg",
+                            "sub_products": null
+                        },
+                        {
+                            "name": "Логопедическая коррекция речи",
+                            "description": "Описание программы",
+                            "thumbnail": "https://avatanplus.com/files/resources/mid/5a2f6d04ac6801604941da62.jpg",
+                            "sub_products": null
+                        },
+                        {
+                            "name": "Неврологические нарушения",
+                            "description": "Описание программы",
+                            "thumbnail": "https://avatanplus.com/files/resources/mid/5a2f6d04ac6801604941da62.jpg",
+                            "sub_products": [
+                                {
+                                    "name": "Нарушение моторики координации",
+                                    "description": "Описание программы",
+                                    "thumbnail": "https://avatanplus.com/files/resources/mid/5a2f6d04ac6801604941da62.jpg"
+                                },
+                                {
+                                    "name": "Тики и самопроизвольные движения",
+                                    "description": "Описание программы",
+                                    "thumbnail": "https://avatanplus.com/files/resources/mid/5a2f6d04ac6801604941da62.jpg"
+                                },
+                                {
+                                    "name": "Черепно-мозговые травмы, сотрясения мозга, оперативные вмешательсива",
+                                    "description": "Описание программы",
+                                    "thumbnail": "https://avatanplus.com/files/resources/mid/5a2f6d04ac6801604941da62.jpg"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "category": [
+                {
+                    "id": 2,
+                    "title": "Постковидная реабилитация",
+                    "thumbnail": "https://avatanplus.com/files/resources/mid/5a2f6d04ac6801604941da62.jpg",
+                    "products": [
+                        {
+                            "name": "Восстановление организма после COVID",
+                            "description": "Описание программы",
+                            "thumbnail": "https://avatanplus.com/files/resources/mid/5a2f6d04ac6801604941da62.jpg",
+                            "sub_products": null
+                        },
+                        {
+                            "name": "Восстановление иммунитета",
+                            "description": "Описание программы",
+                            "thumbnail": "https://avatanplus.com/files/resources/mid/5a2f6d04ac6801604941da62.jpg",
+                            "sub_products": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
