@@ -28,7 +28,7 @@ class InfoAppBar extends StatelessWidget implements PreferredSizeWidget {
               style: context.theme.primaryTextTheme.headlineLarge,
             ),
             const Spacer(),
-            trailing ?? const SizedBox(),
+            trailing ?? const SizedBox.shrink(),
           ],
         ),
       );

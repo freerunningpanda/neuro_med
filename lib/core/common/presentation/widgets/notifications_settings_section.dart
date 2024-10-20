@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:upmind_front_client/core/common/domain/entities/user.dart';
 import 'package:upmind_front_client/core/common/presentation/widgets/app_notifications_switcher.dart';
 import 'package:upmind_front_client/core/core.dart';
 import 'package:upmind_front_client/core/utils/constants/app_constants.dart';
@@ -9,11 +10,11 @@ import 'package:upmind_front_client/features/user_notifications/presentation/cub
 
 class NotificationsSettingsSection extends StatelessWidget {
   const NotificationsSettingsSection({
-    required this.userRole,
+    this.user,
     super.key,
   });
 
-  final UserRole userRole;
+  final User? user;
 
   @override
   Widget build(BuildContext context) {
@@ -43,12 +44,14 @@ class NotificationsSettingsSection extends StatelessWidget {
               isActive: state.isPushNotificationsEnabled,
               type: NotificationsType.push,
             ),
-            if (userRole != UserRole.guest)
-              AppNotificationsSwitcher(
-                title: context.tr.emailNotifications,
-                isActive: state.isEmailNotificationsEnabled,
-                type: NotificationsType.email,
-              ),
+            switch (user?.role) {
+              UserRole.patient => AppNotificationsSwitcher(
+                  title: context.tr.emailNotifications,
+                  isActive: state.isEmailNotificationsEnabled,
+                  type: NotificationsType.email,
+                ),
+              _ => const SizedBox.shrink(),
+            },
           ],
         ),
       ),

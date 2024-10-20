@@ -29,10 +29,7 @@ class UserSessionItem extends StatelessWidget {
             padding: const EdgeInsets.only(
               right: AppConstants.commonSize6,
             ),
-            child: userVideo.status.getIcon(theme) ??
-                const SizedBox(
-                  width: AppConstants.commonSize16,
-                ),
+            child: userVideo.status.getIcon(theme) ?? AppConstants.sizedBoxW16,
           ),
           BlocBuilder<SessionItemCubit, SessionItemState>(
             builder: (context, state) {

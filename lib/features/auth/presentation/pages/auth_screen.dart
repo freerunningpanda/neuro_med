@@ -20,9 +20,10 @@ class AuthScreen extends StatelessWidget implements AutoRouteWrapper {
 
   @override
   Widget build(BuildContext context) => BlocListener<AuthBloc, AuthState>(
-        listener: (_, state) => state.whenOrNull(
-          success: (_) => context.replace(const MyProductsRoute()),
-        ),
+        listener: (_, state) => switch (state) {
+          AuthSuccess _ => context.replace(const MyProductsRoute()),
+          _ => null,
+        },
         child: AppScaffold(
           appBar: ActiveAppBar(
             isAuthScreen: true,

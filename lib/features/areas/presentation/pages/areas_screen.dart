@@ -5,9 +5,9 @@ import 'package:upmind_front_client/core/common/presentation/router/app_router.g
 import 'package:upmind_front_client/core/common/presentation/widgets/app_all_buttons.dart';
 import 'package:upmind_front_client/core/common/presentation/widgets/app_bar/active_app_bar.dart';
 import 'package:upmind_front_client/core/common/presentation/widgets/app_divider.dart';
+import 'package:upmind_front_client/core/common/presentation/widgets/app_error.dart';
 import 'package:upmind_front_client/core/common/presentation/widgets/app_ripple_button.dart';
 import 'package:upmind_front_client/core/common/presentation/widgets/app_scaffold.dart';
-import 'package:upmind_front_client/core/common/presentation/widgets/app_something_went_wrong.dart';
 import 'package:upmind_front_client/core/common/presentation/widgets/custom_progress_indicator.dart';
 import 'package:upmind_front_client/core/common/presentation/widgets/default_app_canvas.dart';
 import 'package:upmind_front_client/core/core.dart';
@@ -74,7 +74,7 @@ class AreasScreen extends StatelessWidget implements AutoRouteWrapper {
                   );
                 },
               ),
-            AreasError() => AppSomethingWentWrong(
+            AreasError() => AppError(
                 onPressed: () => context
                   ..read<AreasBloc>().add(
                     const LoadAreas(),

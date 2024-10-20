@@ -4,7 +4,6 @@ abstract class MainColors {
   const MainColors({
     required this.primary,
     required this.accent,
-    required this.light,
     required this.bg70,
     required this.white,
   });
@@ -12,8 +11,6 @@ abstract class MainColors {
   final Color primary;
 
   final Color accent;
-
-  final Color light;
 
   final Color bg70;
 

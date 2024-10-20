@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:upmind_front_client/core/common/domain/entities/user.dart';
 import 'package:upmind_front_client/core/common/presentation/router/app_router.gr.dart';
 import 'package:upmind_front_client/core/common/presentation/widgets/app_all_buttons.dart';
 import 'package:upmind_front_client/core/common/presentation/widgets/app_bar/info_app_bar.dart';
@@ -9,7 +10,6 @@ import 'package:upmind_front_client/core/common/presentation/widgets/app_scaffol
 import 'package:upmind_front_client/core/common/presentation/widgets/custom_app_canvas.dart';
 import 'package:upmind_front_client/core/common/presentation/widgets/main_screen_content.dart';
 import 'package:upmind_front_client/core/core.dart';
-import 'package:upmind_front_client/core/utils/enums/user_role.dart';
 import 'package:upmind_front_client/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:upmind_front_client/features/main/presentation/widgets/areas_widget.dart';
 
@@ -24,16 +24,15 @@ class MainScreen extends StatelessWidget {
     final title = context.tr.upmind_products;
 
     return BlocBuilder<AuthBloc, AuthState>(
-      builder: (_, state) => state.maybeWhen(
-        success: (userRole) => _Content(
-          title: title,
-          userRole: userRole,
-        ),
-        orElse: () => _Content(
-          title: title,
-          userRole: UserRole.guest,
-        ),
-      ),
+      builder: (_, state) => switch (state) {
+        AuthSuccess _ => _Content(
+            title: title,
+            user: state.user,
+          ),
+        _ => _Content(
+            title: title,
+          ),
+      },
     );
   }
 }
@@ -41,11 +40,11 @@ class MainScreen extends StatelessWidget {
 class _Content extends StatelessWidget {
   const _Content({
     required this.title,
-    required this.userRole,
+    this.user,
   });
 
   final String title;
-  final UserRole userRole;
+  final User? user;
 
   @override
   Widget build(BuildContext context) => SafeArea(
@@ -62,8 +61,10 @@ class _Content extends StatelessWidget {
               child: const AreasWidget(),
             ),
             hasLowerDivider: false,
+            // TODO(freerunningpanda): здесь возможно будет условие.
+            // Для отображения контента в зависимости от роли пользователя.
             child: MainScreenContent(
-              userRole: userRole,
+              user: user,
             ),
           ),
         ),

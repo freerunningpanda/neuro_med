@@ -355,5 +355,15 @@
   "@repeat": {
     "description": "Кнопка 'Повторить'",
     "type": "text"
+  },
+  "noConnection": "Нет соединения",
+  "@noConnection": {
+    "description": "Сообщение 'Нет соединения'",
+    "type": "text"
+  },
+  "offlineMode": "Приложение работает в режиме оффлайн",
+  "@offlineMode": {
+    "description": "Сообщение 'Приложение работает в режиме оффлайн'",
+    "type": "text"
   }
 }

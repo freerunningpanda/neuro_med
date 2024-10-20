@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:upmind_front_client/core/utils/constants/app_constants.dart';
-import 'package:upmind_front_client/core/utils/enums/user_role.dart';
 import 'package:upmind_front_client/features/products/domain/entities/category.dart';
 import 'package:upmind_front_client/features/products/presentation/widgets/category_header.dart';
 import 'package:upmind_front_client/features/products/presentation/widgets/products_carousel.dart';
@@ -8,13 +7,11 @@ import 'package:upmind_front_client/features/products/presentation/widgets/produ
 class CategoryWithProducts extends StatelessWidget {
   const CategoryWithProducts({
     required this.productsCategory,
-    required this.userRole,
     required this.index,
     super.key,
   });
 
   final Category productsCategory;
-  final UserRole userRole;
   final int index;
 
   @override
@@ -27,13 +24,11 @@ class CategoryWithProducts extends StatelessWidget {
           ),
           child: CategoryHeader(
             productsCategory: productsCategory,
-            userRole: userRole,
             index: index,
           ),
         ),
         ProductsCarousel(
           productsCategory: productsCategory,
-          userRole: userRole,
         ),
       ],
     );

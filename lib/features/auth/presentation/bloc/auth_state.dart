@@ -1,10 +1,27 @@
 part of 'auth_bloc.dart';
 
-@freezed
-class AuthState with _$AuthState {
-  const factory AuthState.idle() = _Idle;
-  const factory AuthState.success({
-    required UserRole userRole,
-  }) = _UserRole;
-  const factory AuthState.error() = _Error;
+sealed class AuthState extends Equatable {
+  const AuthState();
+
+  @override
+  List<Object> get props => [];
+}
+
+final class AuthIdle extends AuthState {
+  const AuthIdle();
+}
+
+final class AuthSuccess extends AuthState {
+  const AuthSuccess({
+    required this.user,
+  });
+
+  final User user;
+
+  @override
+  List<Object> get props => [user];
+}
+
+final class AuthError extends AuthState {
+  const AuthError();
 }

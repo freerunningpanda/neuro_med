@@ -4,9 +4,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:upmind_front_client/core/common/presentation/router/app_router.gr.dart';
 import 'package:upmind_front_client/core/common/presentation/widgets/app_all_buttons.dart';
 import 'package:upmind_front_client/core/common/presentation/widgets/app_bar/active_app_bar.dart';
+import 'package:upmind_front_client/core/common/presentation/widgets/app_error.dart';
 import 'package:upmind_front_client/core/common/presentation/widgets/app_ripple_button.dart';
 import 'package:upmind_front_client/core/common/presentation/widgets/app_scaffold.dart';
-import 'package:upmind_front_client/core/common/presentation/widgets/app_something_went_wrong.dart';
 import 'package:upmind_front_client/core/common/presentation/widgets/custom_progress_indicator.dart';
 import 'package:upmind_front_client/core/common/presentation/widgets/default_app_canvas.dart';
 import 'package:upmind_front_client/core/core.dart';
@@ -63,7 +63,7 @@ class MyProductsScreen extends StatelessWidget {
                     );
                   },
                 ),
-              UserProductsError _ => AppSomethingWentWrong(
+              UserProductsError _ => AppError(
                   onPressed: () => context
                     ..read<UserProductsBloc>().add(
                       LoadUserProducts(),

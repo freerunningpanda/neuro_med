@@ -1,6 +1,6 @@
+import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:upmind_front_client/core/utils/enums/user_role.dart';
+import 'package:upmind_front_client/core/common/domain/entities/user.dart';
 import 'package:upmind_front_client/core/utils/usecase/usecase.dart';
 import 'package:upmind_front_client/features/auth/domain/usecases/check_auth.dart';
 import 'package:upmind_front_client/features/auth/domain/usecases/user_login.dart';
@@ -8,7 +8,6 @@ import 'package:upmind_front_client/features/auth/domain/usecases/user_logout.da
 
 part 'auth_event.dart';
 part 'auth_state.dart';
-part 'auth_bloc.freezed.dart';
 
 typedef _Emit = Emitter<AuthState>;
 
@@ -18,11 +17,13 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     this._userLogout,
     this._checkAuth,
   ) : super(
-          const AuthState.idle(),
+          const AuthIdle(),
         ) {
-    on<_CheckAuth>(_onCheckAuth);
-    on<_LoginUser>(_onLoginUser);
-    on<_LogoutUser>(_onLogoutUser);
+    on<_CheckAuthEvent>(_onCheckAuth);
+    on<LoginUserEvent>(_onLoginUser);
+    on<LogoutUserEvent>(_onLogoutUser);
+
+    add(const _CheckAuthEvent());
   }
 
   final UserLogin _userLogin;
@@ -30,8 +31,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final CheckAuth _checkAuth;
 
   /// Авторизация пользователя
-  Future<void> _onLoginUser(_LoginUser event, _Emit emit) async {
-    emit(const AuthState.idle());
+  Future<void> _onLoginUser(LoginUserEvent event, _Emit emit) async {
+    emit(const AuthIdle());
     final response = await _userLogin.call(
       UserLoginParams(
         username: event.login,
@@ -41,12 +42,12 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
     response.fold(
       (error) {
-        emit(const AuthState.error());
+        emit(const AuthError());
       },
       (authInfo) {
         emit(
-          AuthState.success(
-            userRole: authInfo.$2.role,
+          AuthSuccess(
+            user: authInfo.$2,
           ),
         );
       },
@@ -54,30 +55,30 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   }
 
   /// Выход пользователя
-  Future<void> _onLogoutUser(_LogoutUser event, _Emit emit) async {
+  Future<void> _onLogoutUser(LogoutUserEvent event, _Emit emit) async {
     final response = await _userLogout.call(NoParams());
 
     response.fold((_) {
-      emit(const AuthState.error());
-      emit(const AuthState.idle());
+      emit(const AuthError());
+      emit(const AuthIdle());
     }, (_) {
-      emit(const AuthState.idle());
+      emit(const AuthIdle());
     });
   }
 
   /// Проверка авторизации
-  Future<void> _onCheckAuth(_CheckAuth event, _Emit emit) async {
+  Future<void> _onCheckAuth(_CheckAuthEvent event, _Emit emit) async {
     final response = await _checkAuth.call(NoParams());
 
     response.fold(
       (error) {
         // Эмитим состояние ошибки
         emit(
-          const AuthState.error(),
+          const AuthError(),
         );
         // Эмитим роль гостя
         emit(
-          const AuthState.idle(),
+          const AuthIdle(),
         );
       },
       (authInfo) {
@@ -88,13 +89,13 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         if (authData == null || user == null) {
           // Эмитим роль гостя
           emit(
-            const AuthState.idle(),
+            const AuthIdle(),
           );
           return;
         }
         emit(
-          AuthState.success(
-            userRole: user.role,
+          AuthSuccess(
+            user: user,
           ),
         );
       },

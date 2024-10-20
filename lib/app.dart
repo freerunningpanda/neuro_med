@@ -39,12 +39,7 @@ class App extends StatelessWidget {
         BlocProvider(
           create: (_) => sl<ConnectionCheckerCubit>(),
         ),
-        BlocProvider(
-          create: (_) => sl<AuthBloc>()
-            ..add(
-              const AuthEvent.checkAuth(),
-            ),
-        ),
+        BlocProvider(create: (_) => sl<AuthBloc>()),
         BlocProvider(
           create: (_) => sl<SplashScreenCubit>(),
         ),

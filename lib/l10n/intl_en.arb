@@ -354,5 +354,15 @@
   "@repeat": {
     "description": "The 'Repeat' message",
     "type": "text"
+  },
+  "noConnection": "Нет соединения",
+  "@noConnection": {
+    "description": "The 'No connection' message",
+    "type": "text"
+  },
+  "offlineMode": "Приложение работает в режиме оффлайн",
+  "@offlineMode": {
+    "description": "The 'The app is running in offline mode' message",
+    "type": "text"
   }
 }

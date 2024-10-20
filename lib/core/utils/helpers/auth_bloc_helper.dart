@@ -10,7 +10,7 @@ class AuthBlocHelper {
   /// Получение состояния ошибки авторизации.
   bool getErrorState(BuildContext context) {
     final isAuthErrorState = context.select<AuthBloc, bool>(
-      (bloc) => bloc.state == const AuthState.error(),
+      (bloc) => bloc.state == const AuthError(),
     );
 
     return isAuthErrorState;

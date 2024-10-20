@@ -1,36 +1,28 @@
-import 'package:equatable/equatable.dart';
+import 'package:upmind_front_client/core/common/domain/entities/user.dart';
+import 'package:upmind_front_client/core/utils/enums/user_role.dart';
 
-class UserModel extends Equatable {
+class UserModel extends User {
   const UserModel({
-    required this.id,
-    required this.firstName,
-    required this.role,
-    this.lastName,
+    required super.id,
+    required super.email,
+    required super.firstName,
+    required super.lastName,
+    required super.role,
   });
 
   factory UserModel.fromJson(Map<String, dynamic> json) => UserModel(
         id: json['id'] as int,
+        email: json['email'] as String?,
         firstName: json['first_name'] as String?,
         lastName: json['last_name'] as String?,
-        role: json['role'] as String,
+        role: UserRole.parse(json['role'] as String),
       );
-  final int id;
-  final String? firstName;
-  final String? lastName;
-  final String role;
 
   Map<String, dynamic> toJson() => {
         'id': id,
+        'email': email,
         'first_name': firstName,
         'last_name': lastName,
-        'role': role,
+        'role': role.name,
       };
-
-  @override
-  List<Object?> get props => [
-        id,
-        firstName,
-        lastName,
-        role,
-      ];
 }

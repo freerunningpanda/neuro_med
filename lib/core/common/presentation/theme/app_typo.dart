@@ -7,8 +7,6 @@ import 'package:upmind_front_client/core/common/presentation/theme/typography/he
 import 'package:upmind_front_client/core/common/presentation/theme/typography/text_typo.dart';
 import 'package:upmind_front_client/core/utils/gen/fonts.gen.dart';
 
-// TODO(freerunningpanda): выпилить лишние константы
-
 /// Класс [AppTypo] содержит типографику приложения.
 /// Все изменения в типографике производятся в этом классе.
 
@@ -72,7 +70,6 @@ class _TextTypography extends TextTypography {
           tx1Regular: const TextStyle(
             fontSize: 15,
             fontWeight: FontWeight.w400,
-            // TODO(freerunningpanda): сделать по аналогии для остальных
             height: 20.49 / 15,
             fontFamily: FontFamily.manrope,
           ),
@@ -82,40 +79,10 @@ class _TextTypography extends TextTypography {
             height: 22 / 16,
             fontFamily: FontFamily.manrope,
           ),
-          tx1Medium: const TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w500,
-            height: 22 / 16,
-            fontFamily: FontFamily.manrope,
-          ),
           tx2Regular: const TextStyle(
             fontSize: 13,
             fontWeight: FontWeight.w400,
             height: 15 / 13,
-            fontFamily: FontFamily.manrope,
-          ),
-          tx2SemiBold: const TextStyle(
-            fontSize: 14,
-            fontWeight: FontWeight.w600,
-            height: 20 / 14,
-            fontFamily: FontFamily.manrope,
-          ),
-          tx2Medium: const TextStyle(
-            fontSize: 14,
-            fontWeight: FontWeight.w500,
-            height: 20 / 14,
-            fontFamily: FontFamily.manrope,
-          ),
-          tx3SemiBold: const TextStyle(
-            fontSize: 12,
-            fontWeight: FontWeight.w600,
-            height: 16 / 12,
-            fontFamily: FontFamily.manrope,
-          ),
-          tx3Medium: const TextStyle(
-            fontSize: 12,
-            fontWeight: FontWeight.w500,
-            height: 16 / 12,
             fontFamily: FontFamily.manrope,
           ),
           tx4Medium: const TextStyle(
@@ -152,12 +119,7 @@ class _DescriptionTypography extends DescriptionTypography {
             fontSize: 13,
             fontWeight: FontWeight.w400,
             fontFamily: FontFamily.manrope,
-          ),
-          des2: const TextStyle(
-            fontSize: 14,
-            fontWeight: FontWeight.w400,
-            fontFamily: FontFamily.manrope,
-            height: 19.12 / 14,
+            height: 17.76 / 13,
           ),
         );
 }

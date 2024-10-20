@@ -1,11 +1,23 @@
 part of 'auth_bloc.dart';
 
-@freezed
-class AuthEvent with _$AuthEvent {
-  const factory AuthEvent.checkAuth() = _CheckAuth;
-  const factory AuthEvent.loginUser({
-    required String login,
-    required String password,
-  }) = _LoginUser;
-  const factory AuthEvent.logoutUser() = _LogoutUser;
+sealed class AuthEvent {
+  const AuthEvent();
+}
+
+final class _CheckAuthEvent extends AuthEvent {
+  const _CheckAuthEvent();
+}
+
+final class LoginUserEvent extends AuthEvent {
+  const LoginUserEvent({
+    required this.login,
+    required this.password,
+  });
+
+  final String login;
+  final String password;
+}
+
+final class LogoutUserEvent extends AuthEvent {
+  const LogoutUserEvent();
 }

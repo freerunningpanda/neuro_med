@@ -2,7 +2,6 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:upmind_front_client/core/common/presentation/router/app_router.gr.dart';
-
 import 'package:upmind_front_client/core/common/presentation/widgets/app_bar/active_app_bar.dart';
 import 'package:upmind_front_client/core/common/presentation/widgets/app_divider.dart';
 import 'package:upmind_front_client/core/common/presentation/widgets/app_notifications_button.dart';
@@ -41,39 +40,37 @@ class SettingsScreen extends StatelessWidget implements AutoRouteWrapper {
           hasCross: true,
           title: context.tr.settings,
           child: BlocBuilder<AuthBloc, AuthState>(
-            builder: (_, state) => state.maybeWhen(
-              success: (userRole) => switch (userRole) {
-                UserRole.patient => Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const UserDataSection(),
-                      const AppDivider(),
-                      NotificationsSettingsSection(
-                        userRole: userRole,
-                      ),
-                      const AppDivider(),
-                    ],
-                  ),
-                _ => Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      NotificationsSettingsSection(
-                        userRole: userRole,
-                      ),
-                      const AppDivider(),
-                    ],
-                  ),
-              },
-              orElse: () => const Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  NotificationsSettingsSection(
-                    userRole: UserRole.guest,
-                  ),
-                  AppDivider(),
-                ],
-              ),
-            ),
+            builder: (_, state) => switch (state) {
+              AuthSuccess _ => switch (state.user.role) {
+                  UserRole.patient => Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const UserDataSection(),
+                        const AppDivider(),
+                        NotificationsSettingsSection(
+                          user: state.user,
+                        ),
+                        const AppDivider(),
+                      ],
+                    ),
+                  _ => Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        NotificationsSettingsSection(
+                          user: state.user,
+                        ),
+                        const AppDivider(),
+                      ],
+                    ),
+                },
+              _ => const Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    NotificationsSettingsSection(),
+                    AppDivider(),
+                  ],
+                ),
+            },
           ),
         ),
       );

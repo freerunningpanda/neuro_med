@@ -4,7 +4,6 @@ import 'package:upmind_front_client/core/common/presentation/router/app_router.g
 import 'package:upmind_front_client/core/common/presentation/widgets/app_ripple_button.dart';
 import 'package:upmind_front_client/core/core.dart';
 import 'package:upmind_front_client/core/utils/constants/app_constants.dart';
-import 'package:upmind_front_client/core/utils/enums/user_role.dart';
 import 'package:upmind_front_client/features/products/domain/entities/user_product.dart';
 import 'package:upmind_front_client/features/products/presentation/utils/status.dart';
 import 'package:upmind_front_client/features/products/presentation/widgets/user_product_card_widget.dart';
@@ -12,12 +11,10 @@ import 'package:upmind_front_client/features/products/presentation/widgets/user_
 class UserProductsCarousel extends StatelessWidget {
   const UserProductsCarousel({
     required this.userProductList,
-    required this.userRole,
     super.key,
   });
 
   final IList<UserProduct> userProductList;
-  final UserRole userRole;
 
   @override
   Widget build(BuildContext context) => SizedBox(

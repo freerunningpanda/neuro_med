@@ -28,7 +28,7 @@ class LogoutButtonWidget extends StatelessWidget {
           buttonTwoTitle: context.tr.logoutButton,
           actionButtonOnTap: () => context
             ..read<AuthBloc>().add(
-              const AuthEvent.logoutUser(),
+              const LogoutUserEvent(),
             )
             ..replaceAll([const MainRoute()])
             ..maybePop(),
@@ -43,7 +43,6 @@ class LogoutButtonWidget extends StatelessWidget {
         child: Row(
           children: [
             SvgGenImage(Assets.icons.common.logout.path).svg(),
-            // TODO(freerunningpanda): сделать по аналогии в других местах
             AppConstants.sizedBoxW10,
             Text(
               context.tr.logoutFromAccount,

@@ -26,7 +26,7 @@ class LoginButton extends StatelessWidget {
     context
       ..read<ConnectionCheckerCubit>().checkConnection()
       ..read<AuthBloc>().add(
-        AuthEvent.loginUser(
+        LoginUserEvent(
           login: login,
           password: password,
         ),

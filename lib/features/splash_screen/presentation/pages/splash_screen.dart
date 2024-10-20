@@ -55,16 +55,16 @@ class SplashScreen extends StatelessWidget implements AutoRouteWrapper {
   @override
   Widget wrappedRoute(BuildContext context) =>
       BlocListener<AuthBloc, AuthState>(
-        listener: (_, state) => state.maybeWhen(
-          orElse: () => Future.delayed(
-            const Duration(seconds: 3),
-            () => context.mounted
-                ? context.replace(
-                    const MainTabRoute(),
-                  )
-                : null,
-          ),
-        ),
+        listener: (_, state) => switch (state) {
+          _ => Future.delayed(
+              const Duration(seconds: 3),
+              () => context.mounted
+                  ? context.replace(
+                      const MainTabRoute(),
+                    )
+                  : null,
+            ),
+        },
         child: this,
       );
 }

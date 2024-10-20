@@ -8,14 +8,13 @@ class UserNotificationModel extends UserNotification {
     required super.date,
   });
 
-  factory UserNotificationModel.fromJson(Map<String, dynamic> json) {
-    return UserNotificationModel(
-      id: json['id'] as int,
-      title: json['title'] as String,
-      body: json['body'] as String,
-      date: json['date'] as String,
-    );
-  }
+  factory UserNotificationModel.fromJson(Map<String, dynamic> json) =>
+      UserNotificationModel(
+        id: json['id'] as int,
+        title: json['title'] as String,
+        body: json['body'] as String,
+        date: json['date'] as String,
+      );
 
   final int id;
 }

@@ -5,7 +5,6 @@ abstract class FieldBordersColors {
     required this.main,
     required this.accent,
     required this.negative,
-    required this.focus,
   });
 
   final Color main;
@@ -13,8 +12,6 @@ abstract class FieldBordersColors {
   final Color accent;
 
   final Color negative;
-
-  final Color focus;
 
   Color get inactive => main.withOpacity(0.4);
 }

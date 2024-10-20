@@ -50,7 +50,7 @@ class ActiveAppBar extends StatelessWidget implements PreferredSizeWidget {
               style: context.theme.primaryTextTheme.headlineSmall,
             ),
             const Spacer(),
-            trailing ?? const SizedBox(),
+            trailing ?? const SizedBox.shrink(),
           ],
         ),
       );

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:upmind_front_client/core/common/presentation/widgets/app_error.dart';
 import 'package:upmind_front_client/core/common/presentation/widgets/logout_button_widget.dart';
 import 'package:upmind_front_client/core/core.dart';
 import 'package:upmind_front_client/core/utils/constants/app_constants.dart';
+import 'package:upmind_front_client/features/auth/presentation/bloc/auth_bloc.dart';
 
 /// Секция с данными пользователя.
 class UserDataSection extends StatelessWidget {
@@ -17,34 +20,41 @@ class UserDataSection extends StatelessWidget {
       padding: const EdgeInsets.symmetric(
         horizontal: AppConstants.commonSize24,
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(
-              top: AppConstants.commonSize16,
-              bottom: AppConstants.commonSize12,
+      child: BlocBuilder<AuthBloc, AuthState>(
+        builder: (_, state) => switch (state) {
+          AuthIdle _ => const SizedBox.shrink(),
+          final AuthSuccess _ => Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(
+                    top: AppConstants.commonSize16,
+                    bottom: AppConstants.commonSize12,
+                  ),
+                  child: Text(
+                    context.tr.myData,
+                    style: theme.primaryTextTheme.headlineMedium?.copyWith(
+                      color: theme.colorScheme.onSurface,
+                    ),
+                  ),
+                ),
+                if (state.user.firstName != null)
+                  _UserDataWidget(
+                    title: context.tr.name,
+                    value: state.user.firstName!,
+                  ),
+                AppConstants.sizedBoxH12,
+                if (state.user.email != null)
+                  _UserDataWidget(
+                    title: context.tr.email,
+                    value: state.user.email!,
+                  ),
+                AppConstants.sizedBoxH24,
+                const LogoutButtonWidget(),
+              ],
             ),
-            child: Text(
-              context.tr.myData,
-              style: theme.primaryTextTheme.headlineMedium?.copyWith(
-                color: theme.colorScheme.onSurface,
-              ),
-            ),
-          ),
-          // TODO(freerunningpanda): Заменить на данные пользователя
-          _UserDataWidget(
-            title: context.tr.name,
-            value: 'Иван',
-          ),
-          AppConstants.sizedBoxH12,
-          _UserDataWidget(
-            title: context.tr.email,
-            value: '12345@mail.ru',
-          ),
-          AppConstants.sizedBoxH24,
-          const LogoutButtonWidget(),
-        ],
+          AuthError _ => const AppError()
+        },
       ),
     );
   }

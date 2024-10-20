@@ -8,7 +8,6 @@ import 'package:upmind_front_client/core/common/presentation/widgets/app_scaffol
 import 'package:upmind_front_client/core/common/presentation/widgets/default_app_canvas.dart';
 import 'package:upmind_front_client/core/core.dart';
 import 'package:upmind_front_client/core/utils/constants/app_constants.dart';
-import 'package:upmind_front_client/core/utils/enums/user_role.dart';
 import 'package:upmind_front_client/features/products/domain/entities/category.dart';
 import 'package:upmind_front_client/features/products/presentation/widgets/product_card_widget.dart';
 
@@ -17,14 +16,12 @@ class ProductListScreen extends StatelessWidget {
   const ProductListScreen({
     required this.previousScreenTitle,
     required this.productList,
-    required this.userRole,
     super.key,
   });
 
   /// Название предыдущего экрана.
   final String previousScreenTitle;
   final Category productList;
-  final UserRole userRole;
 
   @override
   Widget build(BuildContext context) => AppScaffold(

@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:nested/nested.dart';
 import 'package:upmind_front_client/core/common/presentation/cubit/connection_checker/connection_checker_cubit.dart';
 import 'package:upmind_front_client/core/common/presentation/router/app_router.gr.dart';
+import 'package:upmind_front_client/core/common/presentation/utils/app_snackbar.dart';
 import 'package:upmind_front_client/core/common/presentation/widgets/app_scaffold.dart';
 import 'package:upmind_front_client/core/common/presentation/widgets/bottom_navigation_bar/presentation/widgets/bottom_nav_bar_widget.dart';
 import 'package:upmind_front_client/core/core.dart';
@@ -32,18 +33,18 @@ class NavigationScreen extends StatelessWidget implements AutoRouteWrapper {
   List<SingleChildWidget> _getListeners(BuildContext context) => [
         BlocListener<ConnectionCheckerCubit, ConnectionCheckerState>(
           listener: (_, state) => !state.isConnected
-              ? ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text('no connection'),
-                  ),
+              ? AppSnackbar.show(
+                  context,
+                  title: context.tr.noConnection,
+                  message: context.tr.offlineMode,
                 )
               : null,
         ),
         BlocListener<AuthBloc, AuthState>(
-          listener: (context, state) => state.whenOrNull(
-            idle: () => _checkAuth.call(NoParams()),
-          ),
-        ),
+            listener: (_, state) => switch (state) {
+                  AuthIdle _ => _checkAuth.call(NoParams()),
+                  _ => null,
+                }),
       ];
 
   @override

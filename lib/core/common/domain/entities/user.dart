@@ -8,8 +8,10 @@ class User extends Equatable {
     required this.firstName,
     required this.role,
     this.lastName,
+    this.email,
   });
   final int id;
+  final String? email;
   final String? firstName;
   final String? lastName;
   final UserRole role;
@@ -20,5 +22,6 @@ class User extends Equatable {
         firstName,
         role,
         lastName,
+        email,
       ];
 }

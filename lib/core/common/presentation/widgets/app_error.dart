@@ -6,8 +6,8 @@ import 'package:upmind_front_client/core/utils/gen/assets.gen.dart';
 
 /// Виджет отвечающий за отображение ошибки.
 /// Ппозволяющий отправить повторный запрос.
-class AppSomethingWentWrong extends StatelessWidget {
-  const AppSomethingWentWrong({
+class AppError extends StatelessWidget {
+  const AppError({
     this.onPressed,
     super.key,
   });

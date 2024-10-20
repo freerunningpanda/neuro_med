@@ -62,48 +62,51 @@ class BottomNavBarWidget extends StatelessWidget {
     final labelStyle = const AppTypo().captionTypo.c1;
     return BlocBuilder<RouterCubit, RouterState>(
       builder: (_, routerState) => BlocBuilder<AuthBloc, AuthState>(
-        builder: (_, state) => state.maybeWhen(
-          success: (userRole) => BottomNavigationBar(
-            backgroundColor: BottomNavBarColor.getBackgroundColor(
-              context,
-              userRole,
+        builder: (_, state) => switch (state) {
+          AuthSuccess _ => BottomNavigationBar(
+              backgroundColor: BottomNavBarColor.getBackgroundColor(
+                context,
+                state.user,
+              ),
+              currentIndex: tabsRouter.activeIndex,
+              onTap: (index) => _navigationHandler(
+                context,
+                index: index,
+                state: routerState,
+                role: state.user.role,
+              ),
+              items: UserRole.getBottomNavigationBar(
+                context,
+                user: state.user,
+              ),
+              selectedItemColor: BottomNavBarColor.getSelectedItemColor(
+                context,
+                state.user,
+              ),
+              unselectedItemColor: BottomNavBarColor.getUnselectedItemColor(
+                context,
+                state.user,
+              ),
+              selectedLabelStyle: labelStyle,
+              unselectedLabelStyle: labelStyle,
+              selectedIconTheme: context.theme.iconTheme,
             ),
-            currentIndex: tabsRouter.activeIndex,
-            onTap: (index) => _navigationHandler(
-              context,
-              index: index,
-              state: routerState,
-              role: userRole,
+          _ => BottomNavigationBar(
+              currentIndex: tabsRouter.activeIndex,
+              onTap: (index) => _navigationHandler(
+                context,
+                index: index,
+                state: routerState,
+                role: UserRole.guest,
+              ),
+              items: UserRole.getBottomNavigationBar(context),
+              selectedItemColor: context.theme.colorScheme.onPrimary,
+              unselectedItemColor: context.theme.colorScheme.onSecondary,
+              selectedLabelStyle: labelStyle,
+              unselectedLabelStyle: labelStyle,
+              selectedIconTheme: context.theme.iconTheme,
             ),
-            items: UserRole.getBottomNavigationBar(context, userRole),
-            selectedItemColor: BottomNavBarColor.getSelectedItemColor(
-              context,
-              userRole,
-            ),
-            unselectedItemColor: BottomNavBarColor.getUnselectedItemColor(
-              context,
-              userRole,
-            ),
-            selectedLabelStyle: labelStyle,
-            unselectedLabelStyle: labelStyle,
-            selectedIconTheme: context.theme.iconTheme,
-          ),
-          orElse: () => BottomNavigationBar(
-            currentIndex: tabsRouter.activeIndex,
-            onTap: (index) => _navigationHandler(
-              context,
-              index: index,
-              state: routerState,
-              role: UserRole.guest,
-            ),
-            items: UserRole.getBottomNavigationBar(context, UserRole.guest),
-            selectedItemColor: context.theme.colorScheme.onPrimary,
-            unselectedItemColor: context.theme.colorScheme.onSecondary,
-            selectedLabelStyle: labelStyle,
-            unselectedLabelStyle: labelStyle,
-            selectedIconTheme: context.theme.iconTheme,
-          ),
-        ),
+        },
       ),
     );
   }

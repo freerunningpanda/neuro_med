@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:upmind_front_client/core/common/presentation/theme/colors/buttons_colors.dart';
 import 'package:upmind_front_client/core/common/presentation/theme/colors/field_border_colors.dart';
 import 'package:upmind_front_client/core/common/presentation/theme/colors/gradient_colors.dart';
 import 'package:upmind_front_client/core/common/presentation/theme/colors/info_colors.dart';
@@ -12,7 +11,6 @@ abstract class BaseColors extends ThemeExtension<BaseColors> {
   const BaseColors({
     required this.mainColors,
     required this.textColors,
-    required this.buttonColors,
     required this.fieldBordersColors,
     required this.infoColors,
     required this.gradientColors,
@@ -22,8 +20,6 @@ abstract class BaseColors extends ThemeExtension<BaseColors> {
   final MainColors mainColors;
 
   final TextColors textColors;
-
-  final ButtonColors buttonColors;
 
   final FieldBordersColors fieldBordersColors;
 

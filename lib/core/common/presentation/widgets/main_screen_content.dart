@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:upmind_front_client/core/common/presentation/widgets/app_something_went_wrong.dart';
+import 'package:upmind_front_client/core/common/domain/entities/user.dart';
+import 'package:upmind_front_client/core/common/presentation/widgets/app_error.dart';
 import 'package:upmind_front_client/core/common/presentation/widgets/custom_progress_indicator.dart';
 import 'package:upmind_front_client/core/utils/constants/app_constants.dart';
 import 'package:upmind_front_client/core/utils/enums/user_role.dart';
@@ -12,35 +13,38 @@ import 'package:upmind_front_client/features/products/presentation/widgets/my_pr
 
 class MainScreenContent extends StatelessWidget {
   const MainScreenContent({
-    required this.userRole,
+    required this.user,
     super.key,
   });
 
-  final UserRole userRole;
+  final User? user;
 
   @override
   Widget build(BuildContext context) => SingleChildScrollView(
         child: Column(
           children: [
-            // TODO(freerunningpanda): здесь будет переключение ролей.
-            if (userRole != UserRole.guest)
-              BlocBuilder<UserProductsBloc, UserProductsState>(
-                builder: (_, state) => switch (state) {
-                  UserProductsLoading() =>
-                    CustomProgressIndicator().progressIndicator,
-                  UserProductsLoaded(userProductList: final userProductList) =>
-                    MyProgramsMain(
-                      userProductList: userProductList,
-                      userRole: userRole,
-                    ),
-                  UserProductsError() => AppSomethingWentWrong(
-                      onPressed: () => context
-                        ..read<UserProductsBloc>().add(
-                          LoadUserProducts(),
-                        ),
-                    ),
-                },
-              ),
+            switch (user?.role) {
+              UserRole.patient =>
+                BlocBuilder<UserProductsBloc, UserProductsState>(
+                  builder: (_, state) => switch (state) {
+                    UserProductsLoading() =>
+                      CustomProgressIndicator().progressIndicator,
+                    UserProductsLoaded(
+                      userProductList: final userProductList
+                    ) =>
+                      MyProgramsMain(
+                        userProductList: userProductList,
+                      ),
+                    UserProductsError() => AppError(
+                        onPressed: () => context
+                          ..read<UserProductsBloc>().add(
+                            LoadUserProducts(),
+                          ),
+                      ),
+                  },
+                ),
+              _ => const SizedBox.shrink(),
+            },
             BlocBuilder<ProductsBloc, ProductsState>(
               builder: (_, state) => switch (state) {
                 ProductsLoading _ =>
@@ -57,14 +61,13 @@ class MainScreenContent extends StatelessWidget {
                           ),
                           child: CategoryWithProducts(
                             productsCategory: productsCategory,
-                            userRole: userRole,
                             index: index,
                           ),
                         );
                       },
                     ),
                   ),
-                ProductsError _ => AppSomethingWentWrong(
+                ProductsError _ => AppError(
                     onPressed: () => context
                       ..read<ProductsBloc>().add(
                         LoadProducts(),

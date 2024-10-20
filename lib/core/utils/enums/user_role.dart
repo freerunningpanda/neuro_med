@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:upmind_front_client/core/common/domain/entities/user.dart';
 import 'package:upmind_front_client/core/core.dart';
 import 'package:upmind_front_client/core/utils/constants/app_constants.dart';
 import 'package:upmind_front_client/core/utils/gen/assets.gen.dart';
@@ -11,10 +12,10 @@ enum UserRole {
 
   /// Получение нижнего навигационного бара в зависимости от типа пользователя.
   static List<BottomNavigationBarItem> getBottomNavigationBar(
-    BuildContext context,
-    UserRole? role,
-  ) =>
-      switch (role) {
+    BuildContext context, {
+    User? user,
+  }) =>
+      switch (user?.role) {
         UserRole.guest => _defaultBottomNavBarList(context),
         UserRole.patient => [
             BottomNavigationBarItem(
@@ -27,16 +28,16 @@ enum UserRole {
               ),
               label: context.tr.main,
             ),
-            // TODO(freerunningpanda): под замену
             BottomNavigationBarItem(
               icon: Column(
                 children: [
                   AppConstants.sizedBoxH10,
-                  Text(
-                    'Ив',
-                    style: context.theme.primaryTextTheme.headlineMedium
-                        ?.copyWith(color: context.theme.colorScheme.primary),
-                  ),
+                  if (user!.firstName != null)
+                    Text(
+                      user.firstName!.substring(0, 2),
+                      style: context.theme.primaryTextTheme.headlineMedium
+                          ?.copyWith(color: context.theme.colorScheme.primary),
+                    ),
                 ],
               ),
               label: '',
@@ -88,7 +89,7 @@ enum UserRole {
     ];
   }
 
-  static UserRole getRole(String role) => switch (role) {
+  static UserRole parse(String role) => switch (role) {
         'guest' => UserRole.guest,
         'patient' => UserRole.patient,
         _ => UserRole.guest,
