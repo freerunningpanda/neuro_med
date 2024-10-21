@@ -1,8 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:fast_immutable_collections/fast_immutable_collections.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_kinescope_sdk/flutter_kinescope_sdk.dart';
+import 'package:upmind_front_client/core/common/presentation/utils/app_snackbar.dart';
 import 'package:upmind_front_client/core/common/presentation/widgets/app_all_buttons.dart';
 import 'package:upmind_front_client/core/common/presentation/widgets/app_bar/active_app_bar.dart';
 import 'package:upmind_front_client/core/common/presentation/widgets/app_scaffold.dart';
@@ -61,6 +63,17 @@ class _UserProductDetailScreenState extends State<UserProductDetailScreen> {
       widget.userVideo.kinescopeId,
     );
     ScreenOrientationHelper.setAll();
+    if (widget.userVideo.status == Status.newLesson) {
+      SchedulerBinding.instance.addPostFrameCallback(
+        (_) {
+          AppSnackbar.show(
+            context,
+            title: context.tr.error,
+            message: context.tr.sessionIsRestricted,
+          );
+        },
+      );
+    }
   }
 
   @override
@@ -107,20 +120,31 @@ class _UserProductDetailScreenState extends State<UserProductDetailScreen> {
               ),
             ),
           ),
-          if (widget.userVideo.status != Status.inProgress)
-            // TODO(freerunningpanda): Переделать заглушку
-            Positioned.fill(
-              child: Container(
-                color: Colors.black.withOpacity(0.5),
-              ),
-            ),
+          if (widget.userVideo.status != Status.inProgress) const _Cover(),
         ],
       ),
       bottomNavigationBar: isPortrait
-          ? PassedSessions(
-              userVideoList: widget.userVideoList,
+          ? Stack(
+              children: [
+                PassedSessions(
+                  userVideoList: widget.userVideoList,
+                ),
+                if (widget.userVideo.status != Status.inProgress)
+                  const _Cover(),
+              ],
             )
           : null,
     );
   }
+}
+
+class _Cover extends StatelessWidget {
+  const _Cover();
+
+  @override
+  Widget build(BuildContext context) => Positioned.fill(
+        child: Container(
+          color: context.theme.dialogTheme.barrierColor,
+        ),
+      );
 }

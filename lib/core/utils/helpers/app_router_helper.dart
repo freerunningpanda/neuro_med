@@ -5,12 +5,10 @@ import 'package:upmind_front_client/core/common/presentation/cubit/router_cubit/
 
 /// Класс помощник для роутера
 class AppRouterHelper {
-  factory AppRouterHelper() => instance;
   AppRouterHelper._();
-  static final AppRouterHelper instance = AppRouterHelper._();
 
   /// Переход на предыдущий экран
-  void popRoute(BuildContext context, {bool? isAuthScreen}) {
+  static void popRoute(BuildContext context, {bool? isAuthScreen}) {
     context.maybePop();
     // Сбрасываем навигацию, если это экран авторизации
 

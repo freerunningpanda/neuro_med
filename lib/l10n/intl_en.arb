@@ -364,5 +364,10 @@
   "@offlineMode": {
     "description": "The 'The app is running in offline mode' message",
     "type": "text"
+  },
+  "error": "Ошибка",
+  "@error": {
+    "description": "The 'Error' message",
+    "type": "text"
   }
 }

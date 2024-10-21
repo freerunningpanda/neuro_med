@@ -23,7 +23,7 @@ class NavigationScreen extends StatelessWidget implements AutoRouteWrapper {
 
   @override
   Widget wrappedRoute(BuildContext context) => MultiBlocProvider(
-        providers: NavigationScreenBlocProviders.instance.providers,
+        providers: NavigationScreenBlocProviders.providers,
         child: this,
       );
 
@@ -41,10 +41,11 @@ class NavigationScreen extends StatelessWidget implements AutoRouteWrapper {
               : null,
         ),
         BlocListener<AuthBloc, AuthState>(
-            listener: (_, state) => switch (state) {
-                  AuthIdle _ => _checkAuth.call(NoParams()),
-                  _ => null,
-                }),
+          listener: (_, state) => switch (state) {
+            AuthIdle _ => _checkAuth.call(NoParams()),
+            _ => null,
+          },
+        ),
       ];
 
   @override

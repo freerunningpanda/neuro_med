@@ -38,9 +38,6 @@ Future<void> dependencyInjectionsInit() async {
   // Auth init dependency.
   _initAuth();
 
-  // User init dependency.
-  _initUser();
-
   // ConnectionChecker init dependency.
   _initConnectionChecker();
 
@@ -289,28 +286,6 @@ void _initAuth() {
     ..registerLazySingleton<AuthRemoteDatasource>(
       () => AuthRemoteDatasourceImpl(sl(), sl(), sl()),
     );
-}
-
-// TODO(freerunningpanda): Почистить код.
-void _initUser() {
-  // sl
-  // ..registerFactory(() => UserBloc(sl()))
-
-  // // UseCases.
-  // ..registerLazySingleton<GetUser>(() => GetUser(sl()))
-
-  // // Repositories.
-  // ..registerLazySingleton<UserRepository>(
-  //   () => UserRepositoryImpl(sl(), sl(), sl(), sl()),
-  // )
-
-  // // Data sources.
-  // ..registerLazySingleton<UserLocalDatasource>(
-  //   () => UserLocalDatasourceImpl(sl()),
-  // )
-  // ..registerLazySingleton<UserRemoteDatasource>(
-  //   () => UserRemoteDatasourceImpl(sl()),
-  // );
 }
 
 void _initConnectionChecker() {

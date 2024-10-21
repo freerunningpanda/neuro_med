@@ -17,7 +17,12 @@ import 'package:upmind_front_client/features/areas/presentation/widgets/area_ite
 
 @RoutePage()
 class AreasScreen extends StatelessWidget implements AutoRouteWrapper {
-  const AreasScreen({super.key});
+  const AreasScreen({
+    this.previousScreenTitle,
+    super.key,
+  });
+
+  final String? previousScreenTitle;
 
   @override
   Widget build(BuildContext context) {
@@ -25,11 +30,7 @@ class AreasScreen extends StatelessWidget implements AutoRouteWrapper {
 
     return AppScaffold(
       appBar: ActiveAppBar(
-        // ignore: lines_longer_than_80_chars
-        // TODO(freerunningpanda): на данный экран переход только с главного экрана.
-        // если будут добавлены другие экраны.
-        // то вынести в параметр previousScreenTitle.
-        screenTitle: context.tr.upmind_products,
+        screenTitle: previousScreenTitle ?? context.tr.upmind_products,
         trailing: AppAllButtons(
           previousScreenTitle: context.tr.areas,
         ),
@@ -40,8 +41,7 @@ class AreasScreen extends StatelessWidget implements AutoRouteWrapper {
         title: context.tr.areas,
         child: BlocBuilder<AreasBloc, AreasState>(
           builder: (_, state) => switch (state) {
-            AreasLoading _ =>
-              CustomProgressIndicator.instance.progressIndicator,
+            AreasLoading _ => CustomProgressIndicator.progressIndicator,
             AreasLoaded(areaList: final areaList) => ListView.builder(
                 itemCount: areaList.length,
                 itemBuilder: (_, index) {

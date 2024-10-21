@@ -28,7 +28,7 @@ class AppMessageTextField extends StatelessWidget {
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(AppConstants.commonRadius6),
               borderSide: BorderSide(
-                color: AuthBlocHelper.instance.getErrorState(context)
+                color: AuthBlocHelper.getErrorState(context)
                     ? theme.colorScheme.error
                     : theme.colorScheme.onPrimaryContainer,
               ),

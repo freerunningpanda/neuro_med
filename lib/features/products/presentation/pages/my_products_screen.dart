@@ -34,7 +34,7 @@ class MyProductsScreen extends StatelessWidget {
           child: BlocBuilder<UserProductsBloc, UserProductsState>(
             builder: (_, state) => switch (state) {
               UserProductsLoading _ =>
-                CustomProgressIndicator.instance.progressIndicator,
+                CustomProgressIndicator.progressIndicator,
               UserProductsLoaded(userProductList: final userProductList) =>
                 ListView.builder(
                   itemCount: userProductList.length,

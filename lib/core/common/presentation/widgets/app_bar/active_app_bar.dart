@@ -32,7 +32,7 @@ class ActiveAppBar extends StatelessWidget implements PreferredSizeWidget {
           children: [
             AppRippleButton(
               onTap: onTap ??
-                  () => AppRouterHelper.instance.popRoute(
+                  () => AppRouterHelper.popRoute(
                         context,
                         isAuthScreen: isAuthScreen,
                       ),

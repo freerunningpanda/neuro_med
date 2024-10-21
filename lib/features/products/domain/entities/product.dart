@@ -2,7 +2,6 @@ import 'package:equatable/equatable.dart';
 import 'package:fast_immutable_collections/fast_immutable_collections.dart';
 import 'package:upmind_front_client/features/products/domain/entities/sub_products.dart';
 
-// TODO(freerunningpanda): расширить модель, когда будет готов бэк
 class Product extends Equatable {
   const Product({
     required this.name,

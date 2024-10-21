@@ -8,13 +8,9 @@ import 'package:upmind_front_client/features/products/presentation/bloc/user_pro
 import 'package:upmind_front_client/features/user_notifications/presentation/bloc/user_notifications_bloc.dart';
 
 class NavigationScreenBlocProviders {
-  factory NavigationScreenBlocProviders() => instance;
   NavigationScreenBlocProviders._();
 
-  static NavigationScreenBlocProviders instance =
-      NavigationScreenBlocProviders._();
-
-  final List<SingleChildWidget> providers = [
+  static final List<SingleChildWidget> providers = [
     BlocProvider(create: (_) => sl<ProductsBloc>()),
     BlocProvider(create: (_) => sl<UserProductsBloc>()),
     BlocProvider(create: (_) => sl<UserNotificationsBloc>()),

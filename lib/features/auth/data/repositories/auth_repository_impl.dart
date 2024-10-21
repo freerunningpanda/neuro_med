@@ -55,8 +55,8 @@ class AuthRepositoryImpl extends BaseRepository implements AuthRepository {
       execute(_checkAuth, const AuthDatasourceFailure());
 
   Future<(AuthData?, User?)?> _checkAuth() async {
-    // TODO(frerunningpanda): здесь будет замена на проверку наличия куки с бэка
-    // TODO(freerunningpanda): если кука устарела, делаем разлогин и чистим БД
+    // TODO(frerunningpanda): авторизация будет переписана
+    // С использования кук на токен
     final localData = await _localDatasource.getAuthData();
     // Получаем локальные данные авторизации
     final authData = localData?.$1;

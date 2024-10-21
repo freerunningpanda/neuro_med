@@ -57,7 +57,7 @@ class _Content extends StatelessWidget {
           ),
           body: CustomAppCanvas(
             content: AppRippleButton(
-              onTap: () => context.push(const AreasRoute()),
+              onTap: () => context.push(AreasRoute()),
               child: const AreasWidget(),
             ),
             hasLowerDivider: false,

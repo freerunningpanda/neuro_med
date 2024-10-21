@@ -11,7 +11,7 @@ import 'package:upmind_front_client/features/products/data/models/category_model
 import 'package:upmind_front_client/features/products/data/models/user_product_model.dart';
 
 // ignore: lines_longer_than_80_chars
-// TODO(freerunningpanda): Моковая реализация. Удалить после подключения к серверу.
+// TODO(freerunningpanda): Моковая реализация. Заменить после подключения к серверу.
 class ProductsRemoteDatasourceImpl implements ProductsRemoteDatasource {
   const ProductsRemoteDatasourceImpl(
     this._dio,

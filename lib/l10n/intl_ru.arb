@@ -365,5 +365,10 @@
   "@offlineMode": {
     "description": "Сообщение 'Приложение работает в режиме оффлайн'",
     "type": "text"
+  },
+  "error": "Ошибка",
+  "@error": {
+    "description": "Сообщение 'Ошибка'",
+    "type": "text"
   }
 }

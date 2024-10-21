@@ -40,8 +40,8 @@ class NotificationsScreen extends StatelessWidget {
           hasCross: true,
           child: BlocBuilder<UserNotificationsBloc, UserNotificationsState>(
             builder: (_, state) => switch (state) {
-              UserNotificationsLoading _ => Center(
-                  child: CustomProgressIndicator.instance.progressIndicator,
+              UserNotificationsLoading _ => const Center(
+                  child: CustomProgressIndicator.progressIndicator,
                 ),
               UserNotificationsLoaded(notifications: final notifications) =>
                 ListView.builder(

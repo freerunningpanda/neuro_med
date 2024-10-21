@@ -17,7 +17,7 @@ class UserProductModel extends UserProduct {
 
   factory UserProductModel.fromJson(Map<String, dynamic> json) {
     return UserProductModel(
-      id: _generateId(),
+      id: json['id'] as int,
       name: json['name'] as String,
       length: json['length'] as int,
       passed: json['passed'] as int,
@@ -30,12 +30,10 @@ class UserProductModel extends UserProduct {
     );
   }
 
-  // TODO(freerunningpanda): Попросить отдавать с бэка id
-  static int _generateId() => DateTime.now().millisecondsSinceEpoch;
-
   final int id;
 
   Map<String, dynamic> toJson() => {
+        'id': id,
         'name': name,
         'length': length,
         'passed': passed,

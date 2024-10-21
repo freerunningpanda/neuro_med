@@ -5,8 +5,7 @@ import 'package:upmind_front_client/core/core.dart';
 import 'package:upmind_front_client/features/products/data/models/product_model.dart';
 
 class CategoryEntities extends Table {
-  // TODO(freerunningpanda): Возможно убрать autoIncrement и вернуть override.
-  IntColumn get id => integer().autoIncrement()();
+  IntColumn get id => integer()();
   TextColumn get title => text()();
   TextColumn get products => text().map(const ProductsConverter())();
 }

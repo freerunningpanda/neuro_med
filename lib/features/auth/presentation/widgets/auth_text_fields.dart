@@ -16,7 +16,7 @@ class AuthTextFields extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final hasError = AuthBlocHelper.instance.getErrorState(context);
+    final hasError = AuthBlocHelper.getErrorState(context);
     final loginFocusNode = FocusNode();
 
     return Column(

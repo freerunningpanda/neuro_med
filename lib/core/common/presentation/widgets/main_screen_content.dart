@@ -28,7 +28,7 @@ class MainScreenContent extends StatelessWidget {
                 BlocBuilder<UserProductsBloc, UserProductsState>(
                   builder: (_, state) => switch (state) {
                     UserProductsLoading() =>
-                      CustomProgressIndicator().progressIndicator,
+                      CustomProgressIndicator.progressIndicator,
                     UserProductsLoaded(
                       userProductList: final userProductList
                     ) =>
@@ -47,8 +47,7 @@ class MainScreenContent extends StatelessWidget {
             },
             BlocBuilder<ProductsBloc, ProductsState>(
               builder: (_, state) => switch (state) {
-                ProductsLoading _ =>
-                  CustomProgressIndicator.instance.progressIndicator,
+                ProductsLoading _ => CustomProgressIndicator.progressIndicator,
                 ProductsLoaded(productList: final productList) => Column(
                     children: List.generate(
                       productList.length,

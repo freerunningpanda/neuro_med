@@ -51,7 +51,7 @@ class CanvasDefaultHeader extends StatelessWidget {
                     ),
                     child: SvgGenImage(Assets.icons.common.cross.path).svg(),
                   ),
-                  onTap: () => AppRouterHelper.instance.popRoute(
+                  onTap: () => AppRouterHelper.popRoute(
                     context,
                     isAuthScreen: isAuthScreen,
                   ),
